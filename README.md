@@ -68,3 +68,43 @@ Otwórz `index.html`, znajdź odpowiedni kafelek w harmonogramie i zamień znacz
 <div class="cal-event event-blue" style="...">
     ...
 </div>
+
+**ZRÓB**:
+```html
+<a href="wyklad-dragan.html" class="cal-event event-blue" style="...">
+    ...
+</a>
+```
+
+### Krok 3: Edytuj treść (w nowym pliku, np. `wyklad-dragan.html`)
+Otwórz nowo sklonowany plik HTML i podmień informacje w odpowiednich sekcjach:
+
+#### A. Tagi (Sekcja: `<div class="event-tags">`)
+* `<span class="tag tag-zone">Nazwa Strefy</span>`
+* `<span class="tag tag-level">Poziom: np. Początkujący</span>`
+
+#### B. Tytuł i zajawka (Sekcja: `<div class="details-header">`)
+* `<h1 class="details-title">Główny Tytuł Wykładu</h1>`
+* `<p class="details-subtitle">Krótkie streszczenie (1-2 zdania).</p>`
+
+#### C. Czas, miejsce i prelegent (Sekcja: `<div class="event-meta-grid">`)
+Podmień teksty znajdujące się wewnątrz tagów `<p>...</p>`:
+* ⏰ **Godzina**: np. `<p>11:45 - 13:15</p>`
+* 📍 **Lokalizacja**: np. `<p>Sala 101</p>`
+* 🎤 **Prelegent**: np. `<p>Imię i Nazwisko</p>`
+
+#### D. Główny opis (Sekcja: `<div class="details-content">`)
+Tutaj wklejasz pełen tekst od prelegenta. Przydatne formatowanie:
+* `<h3>Tytuł akapitu</h3>` (nagłówek)
+* `<p>Zwykły tekst</p>` (akapity)
+* `<ul class="details-list">` (rozpoczęcie listy punktowanej)
+* `<li>Twój punkt</li>` (pojedynczy element listy)
+* `</ul>` (zakończenie listy)
+
+---
+
+## 🚀 Szybki proces
+
+1. Kopiujesz `example.html` -> nazywasz plik `startup.html`.
+2. W `index.html` podmieniasz `<div>` na: `<a href="startup.html" class="cal-event...">`.
+3. Otwierasz `startup.html`, wpisujesz dane prelekcji, zapisujesz i gotowe!
