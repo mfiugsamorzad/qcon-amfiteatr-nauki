@@ -980,9 +980,14 @@ a.cal-event p {
     .nav-actions { gap: 0.5rem; }
     .nav-actions .btn { padding: 0.6rem; font-size: 0.9rem; }
 
-    /* Poprawka sekcji Hero */
+    /* Poprawka sekcji Hero i Hackathon */
     .main-title { font-size: 2.8rem; }
     .hero-desc { font-size: 1rem; }
+    
+    .hackathon h2 { 
+        font-size: 2.5rem; 
+        word-wrap: break-word;
+    }
     
     /* Zmniejszenie Licznika Czasu */
     .countdown-box { min-width: 65px; padding: 0.8rem 0.5rem; }
