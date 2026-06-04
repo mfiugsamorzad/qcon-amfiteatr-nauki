@@ -50,6 +50,11 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* To zapobiega rozjeżdżaniu się strony na boki! */
+}
+
 body {
     font-family: 'Myriad Pro', sans-serif;
     color: var(--text-main);
@@ -739,7 +744,6 @@ a.cal-event p {
     color: inherit; /* Wymusza poprawne kolory tekstu w agendzie */
 }
 
-
 /* =========================================
    PODSTRONA SZCZEGÓŁÓW WYDARZENIA
 ========================================= */
@@ -898,13 +902,13 @@ a.cal-event p {
 }
 
 /* =========================================
-   RWD - OPTYMALIZACJA MOBILNA
+   RWD - OPTYMALIZACJA MOBILNA (SMARTFONY I TABLETY)
 ========================================= */
 
 /* 1. TABLETY I MAŁE LAPTOPY (do 1024px) */
 @media (max-width: 1024px) {
     header {
-        position: relative; /* Wyłącza przyklejenie do góry - menu nie zajmuje miejsca przy scrollowaniu! */
+        position: relative; 
         flex-direction: column;
         padding: 1.5rem 5%;
         background: var(--bg-darker);
@@ -961,8 +965,12 @@ a.cal-event p {
     .location-container { grid-template-columns: 1fr; }
 }
 
-/* 2. SMARTFONY (do 768px) - Ścisła optymalizacja dla małych ekranów */
+/* 2. SMARTFONY (do 768px) */
 @media (max-width: 768px) {
+    /* Mniejsze marginesy na całej stronie */
+    section { padding: 4rem 5%; }
+    .section-title { font-size: 2.2rem; margin-bottom: 2rem; }
+    
     /* Kompaktowa nawigacja (Header) */
     header { padding: 1rem 5%; }
     .logo { font-size: 1.4rem; }
@@ -972,31 +980,7 @@ a.cal-event p {
     .nav-actions { gap: 0.5rem; }
     .nav-actions .btn { padding: 0.6rem; font-size: 0.9rem; }
 
-    /* KAFELKI STREF - Wymuszenie 2 kolumn obok siebie */
-    .zones-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-    .zone-card {
-        padding: 1.5rem 1rem; /* Mniejsze marginesy wewnątrz */
-    }
-    .zone-icon {
-        font-size: 2rem; /* Mniejsza ikona */
-        margin-bottom: 0.5rem;
-    }
-    .zone-card h3 {
-        font-size: 1rem; /* Mniejszy tytuł, żeby się zmieścił na jednym ekranie z drugim */
-        margin-bottom: 0.5rem;
-    }
-    .zone-desc {
-        font-size: 0.8rem;
-        line-height: 1.3;
-    }
-
-    /* Skalowanie ogólnych fontów i odstępów na smartfonach */
-    .section-title { font-size: 2.2rem; margin-bottom: 2rem; }
-    section { padding: 4rem 5%; }
-    
+    /* Poprawka sekcji Hero */
     .main-title { font-size: 2.8rem; }
     .hero-desc { font-size: 1rem; }
     
@@ -1004,4 +988,56 @@ a.cal-event p {
     .countdown-box { min-width: 65px; padding: 0.8rem 0.5rem; }
     .countdown-box span { font-size: 1.5rem; }
     .countdown-box p { font-size: 0.7rem; }
+
+    /* KAFELKI STREF - Dwa obok siebie z idealnym dopasowaniem */
+    .zones-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    .zone-card {
+        padding: 1.2rem 0.8rem;
+    }
+    .zone-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .zone-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
+    }
+    .zone-desc {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+
+    /* ZABEZPIECZENIE: Kalendarz na mobile */
+    .calendar-wrapper {
+        width: 100%;
+        max-width: 100vw; /* Twardy limit szerokości */
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* ZABEZPIECZENIE: Logotypy partnerów */
+    .partner-logo-large {
+        min-width: 100%; /* Zapobiega rozpychaniu na małych ekranach */
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+    }
+    .partners-grid { gap: 1rem; }
+    .partner-logo { width: 130px; padding: 1rem; }
+    
+    /* ZABEZPIECZENIE: Bottom CTA */
+    .cta-wrapper { min-width: 100%; }
+}
+
+/* 3. BARDZO MAŁE EKRANY (np. iPhone SE - do 375px) */
+@media (max-width: 375px) {
+    .main-title { font-size: 2.4rem; }
+    .zones-grid { gap: 0.5rem; }
+    .zone-card { padding: 1rem 0.5rem; }
+    .zone-icon { font-size: 1.5rem; }
+    .zone-card h3 { font-size: 0.85rem; }
 }
