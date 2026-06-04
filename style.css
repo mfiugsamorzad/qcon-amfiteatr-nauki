@@ -1,0 +1,1007 @@
+/* =========================================
+   WŁASNE FONTY Z PACZKI GRAFICZNEJ
+========================================= */
+
+/* Galano Grotesque - Medium */
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('Rene Bieder - Galano Grotesque Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Galano Grotesque - Bold */
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('Rene Bieder - Galano Grotesque Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Myriad Pro - Regular */
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('MyriadPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =========================================
+   ZMIENNE CSS (Kolorystyka)
+========================================= */
+:root {
+    --primary-color: #C9DB25;   
+    --primary-hover: #b5c61e;   
+    --secondary-color: #00B0E6; 
+    --bg-main: #294898;         
+    --bg-darker: #1d3573;       
+    --bg-card: rgba(255, 255, 255, 0.05); 
+    --text-main: #FFFFFF;       
+    --text-muted: #D1D5DB;      
+}
+
+/* =========================================
+   RESET I PODSTAWY
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Myriad Pro', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: var(--bg-main);
+}
+
+/* Przypisanie Galano do elementów wyróżnionych */
+h1, h2, h3, h4, h5, h6, .logo, .btn, .nav-links a, .countdown-box p {
+    font-family: 'Galano Grotesque', sans-serif;
+}
+
+/* =========================================
+   NAWIGACJA Z DWOMA PRZYCISKAMI
+========================================= */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(41, 72, 152, 0.95);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* =========================================
+   PRZYCISKI BAZOWE I DUŻE (Bottom CTA)
+========================================= */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #111827; 
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #111827;
+}
+
+.btn-dark {
+    background-color: #111827;
+    color: var(--primary-color);
+    border-color: #111827;
+}
+
+.btn-dark:hover {
+    background-color: transparent;
+    color: #111827;
+    border-color: #111827;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201, 219, 37, 0.3);
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   SEKCJA HERO (GŁÓWNA)
+========================================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 5% 0;
+    background: radial-gradient(circle at 50% 50%, #355bc2 0%, #294898 50%, #172c60 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.event-subtitle {
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+}
+
+.accent-text {
+    color: var(--primary-color);
+}
+
+.hero-desc {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Licznik czasu (Countdown) */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.2rem;
+    border-radius: 16px;
+    min-width: 90px;
+    color: var(--text-main);
+}
+
+.countdown-box span {
+    font-size: 2.5rem;
+    font-family: 'Galano Grotesque', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.countdown-box p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   UNIWERSALNE STYLE SEKCJI
+========================================= */
+section {
+    padding: 6rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+/* =========================================
+   O WYDARZENIU / MISJA
+========================================= */
+.about {
+    background-color: var(--bg-darker);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.women-in-tech {
+    background: rgba(201, 219, 37, 0.1);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 0 12px 12px 0;
+}
+
+.women-in-tech h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.gallery-container {
+    text-align: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.gallery-caption {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+/* =========================================
+   OFERTA / STREFY
+========================================= */
+.offer-section {
+    background-color: var(--bg-main);
+}
+
+.zones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.zone-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.zone-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+}
+
+.zone-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.zone-card h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.zone-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* =========================================
+   MINI-HACKATHON
+========================================= */
+.hackathon {
+    background-color: var(--primary-color);
+    color: #111827;
+    text-align: center;
+    padding: 5rem 5%;
+}
+
+.hackathon-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hackathon h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase; /* Dodaje energii */
+}
+
+.hack-details strong {
+    color: #000; /* Mocniejsze wyróżnienie kluczowych punktów w tekście */
+    text-decoration: underline;
+}
+
+.hack-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.hack-details {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.hack-list {
+    margin: 2rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+/* =========================================
+   AGENDA / HARMONOGRAM (KALENDARZ CSS)
+========================================= */
+.agenda {
+    background-color: var(--bg-darker);
+    overflow: hidden;
+}
+
+.calendar-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; 
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: 70px repeat(7, minmax(160px, 1fr));
+    /* Wymuszamy stworzenie osobnego, elastycznego rzędu dla nagłówków i 24 rzędów dla czasu */
+    grid-template-rows: auto repeat(24, 25px); 
+    gap: 6px;
+    min-width: 1000px; 
+}
+
+/* Nagłówki Stref */
+.cal-header {
+    grid-row: 1; /* Wymuszenie bycia w pierwszym rzędzie */
+    font-family: 'Galano Grotesque', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    align-self: end;
+}
+
+/* Etykiety Godzin */
+.time-label {
+    grid-column: 1; /* Sztywne przypisanie wszystkich godzin do pierwszej kolumny */
+    font-family: 'Galano Grotesque', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: right;
+    padding-right: 15px;
+    transform: translateY(-8px); 
+}
+
+/* Kafelki Wydarzeń (Bloki) */
+.cal-event {
+    border-radius: 8px;
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.cal-event:hover {
+    filter: brightness(1.1);
+    transform: scale(0.98);
+    cursor: default;
+}
+
+.cal-event h4 {
+    font-family: 'Galano Grotesque', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+    color: #fff;
+}
+
+.cal-event p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    opacity: 0.8;
+}
+
+/* Kolorystyka i Warianty Bloków */
+.event-common {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.event-blue {
+    background: var(--secondary-color);
+    color: #111827;
+}
+.event-blue h4 { color: #111827; }
+
+.event-lime {
+    background: var(--primary-color);
+    color: #111827;
+}
+.event-lime h4 { color: #111827; }
+
+.event-dark {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-outline {
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+}
+
+/* =========================================
+   DLA NAUCZYCIELI
+========================================= */
+.teachers-section {
+    background-color: var(--primary-color);
+    padding: 4rem 5%;
+    text-align: center;
+    color: #111827;
+}
+
+.teachers-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.teachers-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.teachers-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* =========================================
+   PARTNERZY
+========================================= */
+.partners {
+    background-color: var(--bg-main);
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partner-logo {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.partner-logo:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+}
+
+/* Wyeksponowane Logo (Q-Con) */
+.partner-featured {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.partner-logo-large {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    height: 160px;
+    transition: transform 0.3s;
+}
+
+.partner-logo-large:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo-large img {
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* =========================================
+   FAQ
+========================================= */
+.faq {
+    background-color: var(--bg-darker);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.faq-item h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    color: var(--text-muted);
+}
+
+/* =========================================
+   MAPA I DOJAZD
+========================================= */
+.location {
+    background-color: var(--bg-main);
+}
+
+.location-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.location-info {
+    background: var(--bg-card);
+    padding: 3rem;
+    border-radius: 20px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.location-info h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.location-info p {
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   BOTTOM CTA (Zakończenie przed stopką)
+========================================= */
+.bottom-cta {
+    background: radial-gradient(circle at center, var(--bg-darker) 0%, #111827 100%);
+    text-align: center;
+    padding: 6rem 5%;
+}
+
+.bottom-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 250px; /* Zapewnia stałą szerokość obu przycisków */
+}
+
+.cta-date {
+    color: var(--text-muted); 
+    font-size: 0.8rem; 
+    margin: 0;
+}
+
+/* =========================================
+   STOPKA (FOOTER)
+========================================= */
+footer {
+    background-color: #0f1524;
+    padding: 4rem 5% 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* =========================================
+   ZABEZPIECZENIE DLA KLIKALNYCH LINKÓW
+========================================= */
+a.partner-logo,
+a.partner-logo-large,
+a.cal-event {
+    text-decoration: none; /* Usuwa paskudne podkreślenie */
+    color: inherit; /* Każe tekstom dziedziczyć kolor przypisany w klasie kafelka */
+    display: flex; /* Zapewnia, że wyśrodkowanie elementów nadal działa */
+    cursor: pointer; /* Zmienia kursor na "łapkę" sygnalizującą możliwość kliknięcia */
+}
+
+a.cal-event h4, 
+a.cal-event p {
+    color: inherit; /* Wymusza poprawne kolory tekstu w agendzie */
+}
+
+
+/* =========================================
+   PODSTRONA SZCZEGÓŁÓW WYDARZENIA
+========================================= */
+.subpage-body {
+    background: radial-gradient(circle at top center, var(--bg-darker) 0%, #111827 100%);
+}
+
+.event-details {
+    padding: 8rem 5% 4rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.details-container {
+    background: var(--bg-card);
+    max-width: 900px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.event-tags {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tag-zone {
+    background-color: rgba(201, 219, 37, 0.15); /* Primary z przezroczystością */
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.tag-level {
+    background-color: rgba(0, 176, 230, 0.15); /* Secondary z przezroczystością */
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.details-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.details-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.details-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2.5rem 0;
+}
+
+/* Kafelki z czasem, miejscem i prelegentem */
+.event-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.meta-icon {
+    font-size: 2rem;
+}
+
+.meta-item strong {
+    display: block;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.meta-item p {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Opis wydarzenia */
+.details-content h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.details-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
+.details-list {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.details-list li {
+    margin-bottom: 0.5rem;
+}
+
+.details-list li::marker {
+    color: var(--primary-color); /* Zmiana koloru kropek w liście */
+}
+
+/* Przyciski na dole podstrony */
+.details-actions {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 3rem;
+}
+
+/* RWD dla podstrony */
+@media (max-width: 768px) {
+    .details-container { padding: 2rem; }
+    .details-title { font-size: 2rem; }
+    .event-meta-grid { padding: 1.5rem; gap: 1rem; }
+    .details-actions { flex-direction: column; }
+    .details-actions .btn { width: 100%; text-align: center; }
+}
+
+/* =========================================
+   RWD - OPTYMALIZACJA MOBILNA
+========================================= */
+
+/* 1. TABLETY I MAŁE LAPTOPY (do 1024px) */
+@media (max-width: 1024px) {
+    header {
+        position: relative; /* Wyłącza przyklejenie do góry - menu nie zajmuje miejsca przy scrollowaniu! */
+        flex-direction: column;
+        padding: 1.5rem 5%;
+        background: var(--bg-darker);
+    }
+    .main-nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+    }
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .nav-links a {
+        margin: 0;
+        font-size: 0.95rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+    }
+    .nav-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+    .nav-actions .btn {
+        width: 100%;
+        padding: 0.8rem;
+    }
+    .hero {
+        padding-top: 4rem;
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+    .main-title { font-size: 3.5rem; }
+    
+    .bottom-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-actions .btn {
+        width: 100%;
+        max-width: 350px;
+    }
+    .about-grid { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .footer-content { flex-direction: column; text-align: center; }
+    .countdown-container { gap: 0.5rem; flex-wrap: wrap; }
+    .countdown-box { min-width: 70px; padding: 1rem; }
+    .countdown-box span { font-size: 2rem; }
+    .location-container { grid-template-columns: 1fr; }
+}
+
+/* 2. SMARTFONY (do 768px) - Ścisła optymalizacja dla małych ekranów */
+@media (max-width: 768px) {
+    /* Kompaktowa nawigacja (Header) */
+    header { padding: 1rem 5%; }
+    .logo { font-size: 1.4rem; }
+    .main-nav { margin-top: 1rem; gap: 1rem; }
+    .nav-links { gap: 0.4rem; }
+    .nav-links a { font-size: 0.85rem; padding: 0.4rem 0.6rem; }
+    .nav-actions { gap: 0.5rem; }
+    .nav-actions .btn { padding: 0.6rem; font-size: 0.9rem; }
+
+    /* KAFELKI STREF - Wymuszenie 2 kolumn obok siebie */
+    .zones-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .zone-card {
+        padding: 1.5rem 1rem; /* Mniejsze marginesy wewnątrz */
+    }
+    .zone-icon {
+        font-size: 2rem; /* Mniejsza ikona */
+        margin-bottom: 0.5rem;
+    }
+    .zone-card h3 {
+        font-size: 1rem; /* Mniejszy tytuł, żeby się zmieścił na jednym ekranie z drugim */
+        margin-bottom: 0.5rem;
+    }
+    .zone-desc {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    /* Skalowanie ogólnych fontów i odstępów na smartfonach */
+    .section-title { font-size: 2.2rem; margin-bottom: 2rem; }
+    section { padding: 4rem 5%; }
+    
+    .main-title { font-size: 2.8rem; }
+    .hero-desc { font-size: 1rem; }
+    
+    /* Zmniejszenie Licznika Czasu */
+    .countdown-box { min-width: 65px; padding: 0.8rem 0.5rem; }
+    .countdown-box span { font-size: 1.5rem; }
+    .countdown-box p { font-size: 0.7rem; }
+}
