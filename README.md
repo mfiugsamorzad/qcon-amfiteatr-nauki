@@ -68,6 +68,7 @@ Otwórz `index.html`, znajdź odpowiedni kafelek w harmonogramie i zamień znacz
 <div class="cal-event event-blue" style="...">
     ...
 </div>
+```
 
 **ZRÓB**:
 ```html
