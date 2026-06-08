@@ -1046,3 +1046,56 @@ a.cal-event p {
     .zone-icon { font-size: 1.5rem; }
     .zone-card h3 { font-size: 0.85rem; }
 }
+
+/* =========================================
+   POPRAWKI UX I STICKY COLUMN
+========================================= */
+
+/* Lepszy kontrast dla ciemnego tekstu na jasnym tle */
+.event-lime p {
+    color: #111827;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Wizualna podpowiedź klikalności w kafelkach Agendy */
+a.cal-event {
+    position: relative;
+    padding-right: 1.5rem; /* Zapas miejsca na strzałkę */
+}
+
+a.cal-event::after {
+    content: "➔";
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+a.cal-event:hover::after {
+    transform: translateX(3px);
+    opacity: 1;
+}
+
+/* PRZYPIĘTA KOLUMNA (Sticky) NA TELEFONIE */
+.cal-header:nth-child(1),
+.time-label {
+    position: sticky;
+    left: 0;
+    background-color: #223c7c; 
+    z-index: 10;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.cal-header:nth-child(1) {
+    z-index: 11; 
+    padding-left: 0.5rem;
+}
+
+.time-label {
+    padding-left: 0.5rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
