@@ -1079,23 +1079,36 @@ a.cal-event:hover::after {
     opacity: 1;
 }
 
-/* PRZYPIĘTA KOLUMNA (Sticky) NA TELEFONIE */
-.cal-header:nth-child(1),
+/* =========================================
+   PRZYPIĘTA KOLUMNA (Sticky) NA TELEFONIE
+========================================= */
+
+.calendar-grid::before {
+    content: '';
+    grid-column: 1;
+    grid-row: 1 / -1; /* Rozciąga się od 1 rzędu aż na sam dół kalendarza */
+    position: sticky;
+    left: 0;
+    background-color: var(--bg-card); /* Kolor tła dopasowany do kalendarza */
+    z-index: 9; /* Nad kafelkami wydarzeń, ale pod tekstem godzin */
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px 0 0 8px;
+}
+
 .time-label {
     position: sticky;
     left: 0;
-    background-color: #223c7c; 
     z-index: 10;
-    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 0.5rem;
+    background-color: transparent; /* Tło zapewnia teraz ::before */
+    border: none;
 }
 
 .cal-header:nth-child(1) {
+    position: sticky;
+    left: 0;
+    background-color: var(--bg-card);
     z-index: 11; 
     padding-left: 0.5rem;
 }
 
-.time-label {
-    padding-left: 0.5rem;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
