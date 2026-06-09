@@ -1089,10 +1089,9 @@ a.cal-event:hover::after {
     grid-row: 1 / -1; /* Rozciąga się od 1 rzędu aż na sam dół kalendarza */
     position: sticky;
     left: 0;
-    background-color: var(--bg-card); /* Kolor tła dopasowany do kalendarza */
-    z-index: 9; /* Nad kafelkami wydarzeń, ale pod tekstem godzin */
+    background-color: #1d3573; /* Lity, granatowy kolor */
+    z-index: 9; /* Nad kafelkami, pod tekstem */
     border-right: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px 0 0 8px;
 }
 
 .time-label {
@@ -1100,15 +1099,13 @@ a.cal-event:hover::after {
     left: 0;
     z-index: 10;
     padding-left: 0.5rem;
-    background-color: transparent; /* Tło zapewnia teraz ::before */
-    border: none;
+    background-color: #1d3573; /* Lity granat, żeby zablokować prześwity */
 }
 
 .cal-header:nth-child(1) {
     position: sticky;
     left: 0;
-    background-color: var(--bg-card);
-    z-index: 11; 
+    background-color: #1d3573; /* Lity granat */
+    z-index: 11; /* Musi być zawsze na samej górze */
     padding-left: 0.5rem;
 }
-
