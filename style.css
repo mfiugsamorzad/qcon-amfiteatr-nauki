@@ -852,6 +852,28 @@ a.cal-event p {
     margin: 0;
 }
 
+/* =========================================
+   GODZINY W KAFELKACH (LEWY DOLNY RÓG)
+========================================= */
+
+a.cal-event {
+    position: relative;
+    /* Robimy zapas miejsca na dole, żeby tekst nie najechał na godziny */
+    padding-bottom: 2rem; 
+}
+
+.event-time {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    font-size: 0.7rem;
+    font-family: 'Galano Grotesque', sans-serif;
+    font-weight: 700;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+}
+
+
 /* Opis wydarzenia */
 .details-content h3 {
     color: #fff;
@@ -1077,35 +1099,4 @@ a.cal-event::after {
 a.cal-event:hover::after {
     transform: translateX(3px);
     opacity: 1;
-}
-
-/* =========================================
-   PRZYPIĘTA KOLUMNA (Sticky) NA TELEFONIE
-========================================= */
-
-.calendar-grid::before {
-    content: '';
-    grid-column: 1;
-    grid-row: 1 / -1; /* Rozciąga się od 1 rzędu aż na sam dół kalendarza */
-    position: sticky;
-    left: 0;
-    background-color: #1d3573; /* Lity, granatowy kolor */
-    z-index: 9; /* Nad kafelkami, pod tekstem */
-    border-right: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.time-label {
-    position: sticky;
-    left: 0;
-    z-index: 10;
-    padding-left: 0.5rem;
-    background-color: #1d3573; /* Lity granat, żeby zablokować prześwity */
-}
-
-.cal-header:nth-child(1) {
-    position: sticky;
-    left: 0;
-    background-color: #1d3573; /* Lity granat */
-    z-index: 11; /* Musi być zawsze na samej górze */
-    padding-left: 0.5rem;
 }
