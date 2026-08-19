@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusive by Design | aMFIteatr Nauki</title>
+    
+    <!-- Biblioteka AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Główny plik stylów (zaktualizowana ścieżka) -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="subpage-body">
+
+    <!-- Kompaktowa Nawigacja (Z powrotem do strony głównej) -->
+    <header style="position: relative; background: var(--bg-darker);">
+        <a href="../index.html" class="logo" aria-label="Strona główna aMFIteatr Nauki">aMFIteatr.</a>
+        <nav aria-label="Nawigacja główna" class="main-nav">
+            <div class="nav-actions">
+                <a href="../index.html#agenda" class="btn btn-outline">⬅ Wróć do Harmonogramu</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sekcja Szczegółów Wydarzenia -->
+    <section class="event-details">
+        <div class="details-container" data-aos="fade-up">
+            
+            <!-- Nagłówek i Tagi (z logo Kainos) -->
+            <div class="details-header">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                    <div class="event-tags" style="margin-bottom: 0;">
+                        <span class="tag tag-zone">CYBER SPACE</span>
+                        <span class="tag tag-level">Poziom: Dla każdego</span>
+                        <!-- TAG FORMATU -->
+                        <span class="tag" style="background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3);">🎤 Prelekcja</span>
+                    </div>
+                    
+                    <!-- Pudełko z logo Kainos -->
+                    <div style="background-color: rgba(255, 255, 255, 0.85); padding: 0.8rem 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                        <img src="../logo/logo-kainos.png" alt="Logo Kainos" style="height: 60px; display: block; object-fit: contain;">
+                    </div>
+                </div>
+                <h1 class="details-title">Inclusive by Design – tworzenie aplikacji dla każdego</h1>
+                <p class="details-subtitle">Czy wiesz, że czasem jeden mały detal w aplikacji może sprawić, że dla kogoś staje się ona… kompletnie nieużywalna?</p>
+            </div>
+
+            <hr class="details-divider">
+
+            <!-- Informacje organizacyjne (Kluczowe dane) -->
+            <div class="event-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-icon">⏰</span>
+                    <div>
+                        <strong>Godzina</strong>
+                        <p>Do ustalenia</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">📍</span>
+                    <div>
+                        <strong>Lokalizacja</strong>
+                        <p>Do ustalenia</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div>
+                        <!-- Okrągłe zdjęcie z nową ścieżką do folderu img -->
+                        <img src="../img/agnieszka-gorlak.jpg" alt="Agnieszka Hanna Gorlak" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 0.5rem;">
+                        <br>
+                        <strong>Prelegent</strong>
+                        <p>Agnieszka Hanna Gorlak</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Główny opis -->
+            <div class="details-content">
+                <h3>O czym będzie to wydarzenie?</h3>
+                <p>Zajrzymy za kulisy projektowania aplikacji, pokażemy, jak tworzyć rozwiązania, które działają dla różnych osób, i udowodnimy, że dostępność wcale nie musi być nudna.</p>
+                
+                <h3>Czego się nauczysz?</h3>
+                <ul class="details-list">
+                    <li>Dowiesz się, jak projektować aplikacje z myślą o różnych potrzebach i sposobach korzystania z technologii.</li>
+                    <li>Poznasz zasady i rozwiązania, które pomagają tworzyć bardziej dostępne interfejsy — od prostych decyzji po konkretne elementy UX/UI.</li>
+                    <li>Zobaczysz, co sprawia, że niektóre aplikacje są intuicyjne dla jednych, a frustrujące dla innych. A Ty potrafisz rozpoznać, kiedy design naprawdę działa dla wszystkich?</li>
+                </ul>
+
+                <h3>Dla kogo jest ten blok?</h3>
+                <p>Dla każdego, kto interesuje się projektowaniem interfejsów, technologią przyjazną użytkownikom oraz dla osób, które chcą tworzyć lepsze i bardziej dostępne oprogramowanie. Nie wymagamy wcześniejszego doświadczenia w projektowaniu aplikacji.</p>
+            </div>
+
+            <!-- Wezwanie do działania na dole -->
+            <div class="details-actions">
+                <a href="https://forms.google.com/..." target="_blank" class="btn btn-large">Zarezerwuj miejsce na ten wykład</a>
+                <a href="../index.html#agenda" class="btn btn-outline btn-large">Wróć do Agendy</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Zwięzła Stopka dla podstron -->
+    <footer style="padding: 2rem 5%; background-color: #0f1524; text-align: center;">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2026 Rada Samorządu Studentów MFI UG. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Biblioteka AOS JS do animacji -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
