@@ -111,7 +111,6 @@
                 <p class="zone-desc">Praktyczne Bootcampy dla przyszłych programistów</p>
             </div>
 
-            <!-- Poprawiona sekcja 5 -->
             <div class="zone-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="zone-icon" aria-hidden="true">⏱️</div>
                 <h3>Warsztaty</h3>
@@ -139,7 +138,6 @@
         </div>
     </section>
 
-    <!-- Zaktualizowana sekcja Warsztatowa -->
     <section id="workshops" class="hackathon">
         <div class="hackathon-content">
             <h2 data-aos="zoom-in-down">Warsztaty Hackathon Skills</h2>
@@ -172,7 +170,6 @@
                 <div class="cal-header" style="grid-column: 4;">Future Leaders</div>
                 <div class="cal-header" style="grid-column: 5;">Global Stage</div>
                 <div class="cal-header" style="grid-column: 6;">Tech Poligon</div>
-                <!-- Zaktualizowany nagłówek kolumny -->
                 <div class="cal-header" style="grid-column: 7;">Warsztaty</div>
                 <div class="cal-header" style="grid-column: 8;">Science Fair</div>
 
@@ -223,21 +220,23 @@
                 </a>
 
                 <!-- Strefa: Cyber Space (kolumna 3) -->
-                <a href="events/devops.html" data-zone="Cyber Space" class="cal-event event-dark" style="grid-column: 3; grid-row: 7 / 10;">
-                    <h4>Budowanie w chmurze</h4>
-                    <p>Ala Rudnicka</p>
+                <!-- Puste miejsce zrobione przez przeniesienie Ali -->
+                <a href="#agenda" data-zone="Cyber Space" class="cal-event event-outline" style="grid-column: 3; grid-row: 7 / 10; opacity: 0.6; border-style: dashed;">
+                    <h4>Stay tuned!</h4>
+                    <p>Ogłoszenie wkrótce...</p>
                     <span class="event-time">10:15 - 11:00</span>
                 </a>
                 
-                <a href="events/modele.html" data-zone="Cyber Space" class="cal-event event-blue" style="grid-column: 3; grid-row: 10 / 13;">
+                <a href="events/modele.html" data-zone="Cyber Space" class="cal-event event-dark" style="grid-column: 3; grid-row: 10 / 13;">
                     <h4>Przepowiadanie przyszłości</h4>
                     <p>Maja Zontek</p>
                     <span class="event-time">11:10 - 11:55</span>
                 </a>
 
-                <a href="#agenda" data-zone="Cyber Space" class="cal-event event-outline" style="grid-column: 3; grid-row: 13 / 16; opacity: 0.6; border-style: dashed;">
-                    <h4>Stay tuned!</h4>
-                    <p>Ogłoszenie wkrótce...</p>
+                <!-- Przesunięta Ala na 12:05 -->
+                <a href="events/devops.html" data-zone="Cyber Space" class="cal-event event-lime" style="grid-column: 3; grid-row: 13 / 16;">
+                    <h4>Budowanie w chmurze</h4>
+                    <p>Ala Rudnicka</p>
                     <span class="event-time">12:05 - 12:50</span>
                 </a>
 
@@ -248,7 +247,7 @@
                 </a>
 
                 <!-- Strefa: Future Leaders (kolumna 4) -->
-                <a href="events/logistyka.html" data-zone="Future Leaders" class="cal-event event-lime" style="grid-column: 4; grid-row: 7 / 10;">
+                <a href="events/logistyka.html" data-zone="Future Leaders" class="cal-event event-blue" style="grid-column: 4; grid-row: 7 / 10;">
                     <h4>Zorganizuj niemożliwe</h4>
                     <p>Krzysztof Świątek</p>
                     <span class="event-time">10:15 - 11:00</span>
@@ -271,7 +270,7 @@
                 </a>
 
                 <!-- Strefa: Global Stage (kolumna 5) -->
-                <a href="events/inclusive.html" data-zone="Global Stage" class="cal-event event-lime" style="grid-column: 5; grid-row: 7 / 10;">
+                <a href="events/inclusive.html" data-zone="Global Stage" class="cal-event event-dark" style="grid-column: 5; grid-row: 7 / 10;">
                     <h4>Inclusive by Design</h4>
                     <p>Agnieszka Hanna Gorlak</p>
                     <span class="event-time">10:15 - 11:00</span>
@@ -304,14 +303,14 @@
                     <span class="event-time">11:55 - 13:15</span>
                 </a>
 
-                <!-- Strefa: Zaktualizowane Warsztaty (kolumna 7) -->
-                <a href="#agenda" data-zone="Warsztaty" class="cal-event event-blue" style="grid-column: 7; grid-row: 7 / 13;">
+                <!-- Strefa: Warsztaty (kolumna 7) -->
+                <a href="#agenda" data-zone="Warsztaty" class="cal-event event-lime" style="grid-column: 7; grid-row: 7 / 13;">
                     <h4>Hackathon Skills - organizacja pracy</h4>
                     <p>Alicja Świtlik (STARTER)</p>
                     <span class="event-time">10:15 - 11:45</span>
                 </a>
 
-                <a href="#agenda" data-zone="Warsztaty" class="cal-event event-lime" style="grid-column: 7; grid-row: 13 / 19;">
+                <a href="#agenda" data-zone="Warsztaty" class="cal-event event-blue" style="grid-column: 7; grid-row: 13 / 19;">
                     <h4>Sztuka prezentacji - Pitching</h4>
                     <p>Alicja Świtlik (STARTER)</p>
                     <span class="event-time">11:55 - 13:15</span>
@@ -407,8 +406,23 @@
                 <img src="logo/logo-dziewczyny.png" alt="Logo Dziewczyny do ścisłych" loading="lazy">
             </div>
         </div>
+        
+        <!-- Nowa sekcja: Patronaty Merytoryczne -->
+        <div class="partner-featured" data-aos="zoom-in" data-aos-delay="650" style="margin-top: 4rem; padding-top: 4rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center;">
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">
+                Patronat / Partnerzy merytoryczni:
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div class="partner-logo-large" style="min-width: 250px; height: 130px; padding: 1.5rem;">
+                    <img src="logo/logo-codeme.png" alt="Logo Fundacja CODE:ME" loading="lazy">
+                </div>
+                <div class="partner-logo-large" style="min-width: 250px; height: 130px; padding: 1.5rem;">
+                    <img src="logo/logo-starter.png" alt="Logo STARTER Gdańsk" loading="lazy">
+                </div>
+            </div>
+        </div>
 
-        <div class="partner-featured" data-aos="zoom-in" data-aos-delay="700">
+        <div class="partner-featured" data-aos="zoom-in" data-aos-delay="700" style="border-top: none; padding-top: 0;">
             <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">
                 Oficjalne wydarzenie towarzyszące międzynarodowej konferencji:
             </p>
@@ -439,7 +453,6 @@
                 <p>Nie, udział w wydarzeniu aMFIteatr Nauki jest całkowicie bezpłatny. Obowiązuje jednak wcześniejsza rejestracja ze względu na ograniczoną liczbę miejsc w salach i na warsztatach.</p>
             </div>
             <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <!-- Zaktualizowane pytanie FAQ -->
                 <h3>Czy muszę mieć zespół na warsztaty Hackathon Skills?</h3>
                 <p>Nie! Warsztaty to idealna okazja do poznania nowych osób. Będziemy pracować w grupach, które uformują się naturalnie na miejscu, a jednym z elementów szkolenia będzie właśnie szybki teambuilding.</p>
             </div>
