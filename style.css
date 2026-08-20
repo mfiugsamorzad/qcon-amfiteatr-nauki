@@ -424,10 +424,10 @@ section {
 .calendar-grid {
     display: grid;
     grid-template-columns: 70px repeat(7, minmax(160px, 1fr));
-    /* Wymuszamy stworzenie osobnego, elastycznego rzędu dla nagłówków i 24 rzędów dla czasu */
     grid-template-rows: auto repeat(24, 25px); 
     gap: 6px;
     min-width: 1000px; 
+    -webkit-overflow-scrolling: touch; 
 }
 
 /* Nagłówki Stref */
