@@ -18,44 +18,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Responsywna Agenda (Mobile) -->
-    <style>
-        @media (max-width: 768px) {
-            .calendar-grid {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 1rem !important;
-                min-width: unset !important;
-            }
-            .cal-header, .time-label {
-                display: none !important;
-            }
-            .cal-event {
-                grid-column: auto !important;
-                grid-row: auto !important;
-                position: relative !important;
-                padding: 1.2rem !important;
-                min-height: 80px;
-            }
-            .cal-event .event-time {
-                position: relative !important;
-                bottom: auto !important;
-                left: auto !important;
-                display: block !important;
-                margin-top: 0.5rem !important;
-            }
-            /* Dodanie nazwy strefy dla czytelności na mobile */
-            .cal-event::before {
-                content: attr(data-zone);
-                display: block;
-                font-size: 0.7rem;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                opacity: 0.7;
-                margin-bottom: 0.3rem;
-            }
-        }
-    </style>
+    
 </head>
 <body>
 
