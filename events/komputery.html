@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimniejsze niż kosmos | aMFIteatr Nauki</title>
+    
+    <!-- Biblioteka AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Główny plik stylów -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="subpage-body">
+
+    <!-- Kompaktowa Nawigacja -->
+    <header style="position: relative; background: var(--bg-darker);">
+        <a href="../index.html" class="logo" aria-label="Strona główna aMFIteatr Nauki">aMFIteatr.</a>
+        <nav aria-label="Nawigacja główna" class="main-nav">
+            <div class="nav-actions">
+                <a href="../index.html#agenda" class="btn btn-outline">⬅ Wróć do Harmonogramu</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sekcja Szczegółów Wydarzenia -->
+    <section class="event-details">
+        <div class="details-container" data-aos="fade-up">
+            
+            <!-- Nagłówek i Tagi -->
+            <div class="details-header">
+                <div class="event-tags">
+                    <span class="tag tag-zone">STEM ARENA</span>
+                    <span class="tag tag-level">Poziom: Dla każdego</span>
+                    <!-- TAG FORMATU -->
+                    <span class="tag" style="background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3);">🔬 Pokaz / Warsztat</span>
+                </div>
+                <h1 class="details-title">Zimniejsze niż kosmos – krótko o komputerach kwantowych</h1>
+                <p class="details-subtitle">Zanurz się w świat, który przeczy zdrowemu rozsądkowi i poznaj technologię, która zrewolucjonizuje naszą przyszłość!</p>
+            </div>
+
+            <hr class="details-divider">
+
+            <!-- Informacje organizacyjne -->
+            <div class="event-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-icon">⏰</span>
+                    <div>
+                        <strong>Godzina</strong>
+                        <p>Do ustalenia</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">📍</span>
+                    <div>
+                        <strong>Lokalizacja</strong>
+                        <p>Do ustalenia</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div>
+                        <!-- Okrągłe zdjęcie prelegenta -->
+                        <img src="../img/mateusz-kowalczyk.jpg" alt="Mateusz Kowalczyk" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 0.5rem;">
+                        <br>
+                        <strong>Prowadzący</strong>
+                        <p>Mateusz Kowalczyk<br><span style="font-size: 0.85em; color: var(--text-muted);">KN Φzyków</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Główny opis -->
+            <div class="details-content">
+                <h3>O czym będą to zajęcia?</h3>
+                <p>Świat kwantowy rządzi się zasadami, które przeczą zdrowemu rozsądkowi – cząstki mogą być w kilku stanach naraz, a pomiar jednej z nich potrafi natychmiast wpłynąć na drugą, nawet oddaloną o kilometry. Na tej właśnie dziwności naukowcy próbują zbudować komputery, które mogłyby rozwiązywać problemy niedostępne dla żadnej dzisiejszej maszyny. Żeby to jednak działało, trzeba zejść z temperaturą... niżej niż w kosmicznej próżni!</p>
+                <p>Podczas zajęć na własne oczy doświadczycie zjawiska splątania kwantowego, dowiecie się, na czym polega prawdziwa przewaga komputera kwantowego nad klasycznym oraz poznacie sprzęt, dzięki któremu w ogóle da się je zbudować.</p>
+                
+                <h3>Czego się nauczysz?</h3>
+                <ul class="details-list">
+                    <li>Weźmiesz udział w eksperymencie pokazującym w praktyce, na czym polega splątanie kwantowe.</li>
+                    <li>Poznasz różnicę między bitem a kubitem i zrozumiesz prawdziwe źródło mocy obliczeniowej komputerów kwantowych.</li>
+                    <li>Dowiesz się, do jakich problemów realnie mogą się przydać te maszyny (np. nowe leki, zaawansowane materiały, kryptografia) – i gdzie kończy się *hype*.</li>
+                    <li>Poznasz z bliska sprzęt, który utrzymuje ekstremalnie niskie temperatury niezbędne do działania komputera kwantowego.</li>
+                </ul>
+
+                <h3>Co zyskasz, biorąc udział?</h3>
+                <p>Przede wszystkim zetknięcie z realnym sprzętem i metodami z laboratoriów fizyki kwantowej. To unikalna okazja na zrozumienie u podstaw jednej z najbardziej przełomowych technologii najbliższych dekad.</p>
+            </div>
+
+            <!-- Wezwanie do działania na dole -->
+            <div class="details-actions">
+                <a href="https://forms.google.com/..." target="_blank" class="btn btn-large">Zarezerwuj miejsce na ten warsztat</a>
+                <a href="../index.html#agenda" class="btn btn-outline btn-large">Wróć do Agendy</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Zwięzła Stopka -->
+    <footer style="padding: 2rem 5%; background-color: #0f1524; text-align: center;">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2026 Rada Samorządu Studentów MFI UG. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Biblioteka AOS JS do animacji -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
