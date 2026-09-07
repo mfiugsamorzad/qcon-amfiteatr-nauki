@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korelacja, regresja i ekstrapolacja | aMFIteatr Nauki</title>
 
+    <!-- Biblioteka AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Główny plik stylów -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="subpage-body">
+
+    <!-- Kompaktowa Nawigacja -->
+    <header style="position: relative; background: var(--bg-darker);">
+        <a href="../index.html" class="logo" aria-label="Strona główna aMFIteatr Nauki">aMFIteatr.</a>
+        <nav aria-label="Nawigacja główna" class="main-nav">
+            <div class="nav-actions">
+                <a href="../index.html#agenda" class="btn btn-outline">⬅ Wróć do Harmonogramu</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sekcja Szczegółów Wydarzenia -->
+    <section class="event-details">
+        <div class="details-container" data-aos="fade-up">
+            
+            <div class="details-header">
+                <div class="event-tags">
+                    <span class="tag tag-zone">STEM ARENA</span>
+                    <span class="tag tag-level">Poziom: Dla każdego</span>
+                    <!-- TAG FORMATU -->
+                    <span class="tag" style="background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3);">🎤 Prelekcja</span>
+                </div>
+                <h1 class="details-title">Korelacja, regresja i ekstrapolacja, czyli matematyka, dane i "mądre zgadywanie"</h1>
+                <p class="details-subtitle">Czy wiedziałaś(eś), że podczas swojej pracy architekci, fizycy, programiści i bankierzy korzystają z tych samych reguł matematycznych?</p>
+            </div>
+
+            <hr class="details-divider">
+
+            <!-- Informacje organizacyjne (Z okrągłym zdjęciem) -->
+            <div class="event-meta-grid">
+                <div class="meta-item">
+                    <span class="meta-icon">⏰</span>
+                    <div>
+                        <strong>Godzina</strong>
+                        <p>12:55 - 13:30</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">📍</span>
+                    <div>
+                        <strong>Lokalizacja</strong>
+                        <p>Do ustalenia</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div>
+                        <!-- Okrągłe zdjęcie prelegenta -->
+                        <img src="../img/piotr-przypasniak.jpg" alt="Piotr Przypaśniak" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-color); margin-bottom: 0.5rem;">
+                        <br>
+                        <strong>Prowadzący</strong>
+                        <p>Piotr Przypaśniak</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Główny opis -->
+            <div class="details-content">
+                <h3>O czym będzie to wydarzenie?</h3>
+                <p>Podczas tej prelekcji dowiesz się, czym jest analiza danych oraz jak zmienić zwykłe punkty na wykresie w model matematyczny, który pozwala lepiej zrozumieć badane zjawiska.</p>
+                <p>Ponadto wykorzystamy zdobyte umiejętności do odpowiedzi na pytanie związane z pewną grą komputerową...</p>
+
+                <h3>Czego się nauczysz?</h3>
+                <ul class="details-list">
+                    <li>Jaką rolę pełni matematyka w analizie danych.</li>
+                    <li>Co oznaczają pojęcia: korelacja, regresja i ekstrapolacja oraz jakie jest ich znaczenie w procesie badawczym.</li>
+                    <li>Dlaczego korelacja nie oznacza związku przyczynowego.</li>
+                    <li>Czy mając dane z przeszłości możemy przewidywać przyszłe wartości (i czy należy takim przewidywaniom ufać).</li>
+                    <li>Jak, na podstawie danych zrobić swój własny model matematyczny i ocenić jego wiarygodność.</li>
+                </ul>
+
+                <h3>Dla kogo jest ten blok?</h3>
+                <p>Dla każdego, kto chciałby się przekonać, w jaki sposób matematyka pozwala na lepsze zrozumienie otaczającego nas świata. Nie jest wymagana znajomość zaawansowanej wiedzy matematycznej – wystarczy ciekawość świata i funkcja liniowa :)</p>
+            </div>
+
+            <!-- Wezwanie do działania na dole -->
+            <div class="details-actions">
+                <a href="../index.html#agenda" class="btn btn-large">Wróć do Agendy</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Zwięzła Stopka -->
+    <footer style="padding: 2rem 5%; background-color: #0f1524; text-align: center;">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2026 Rada Samorządu Studentów MFI UG. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Biblioteka AOS JS do animacji -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
